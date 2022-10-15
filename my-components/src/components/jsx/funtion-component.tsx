@@ -1,0 +1,1 @@
+export default (props:any, ctx:any) => <div>{props.message}</div>
