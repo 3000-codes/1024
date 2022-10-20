@@ -12,12 +12,12 @@ const option = defineProps({
 })
 
 const typeClass = computed(() => {
-  return 'my-button my-button-' + option.type
+  return 'my-button-' + option.type
 })
 </script>
 
 <template>
-  <button :class="typeClass">
+  <button class="my-button" :class="typeClass">
     <slot />
   </button>
 </template>
@@ -48,7 +48,9 @@ const typeClass = computed(() => {
     outline: none;
   }
 
-  &.my-button-default {}
+  &.my-button-default {
+    
+  }
 }
 
 /* button big 的样式 */
