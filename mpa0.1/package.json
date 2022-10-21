@@ -1,0 +1,44 @@
+{
+  "name": "datastore-portal-ui",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite   ",
+    "build": "vite build ",
+    "preview": "vite preview --open",
+    "lint-fix": "eslint --fix --ext .js --ext .jsx --ext .vue src/",
+    "refresh": "node ./scripts/refreshApiFile.js"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.0.6",
+    "axios": "~0.27.2",
+    "element-plus": "2.2.12",
+    "js-base64": "~3.7.2",
+    "lodash": "~4.17.21",
+    "normalize.css": "~8.0.1",
+    "pinia": "~2.0.17",
+    "pinia-plugin-persistedstate": "~1.2.3",
+    "vue": "~3.2.37",
+    "vue-router": "~4.0.12"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "~3.0.0",
+    "@vitejs/plugin-vue-jsx": "~2.0.0",
+    "eslint": "~8.21.0",
+    "eslint-config-standard": "~17.0.0",
+    "eslint-plugin-import": "~2.26.0",
+    "eslint-plugin-n": "~15.2.4",
+    "eslint-plugin-promise": "~6.0.0",
+    "eslint-plugin-vue": "~9.3.0",
+    "mockjs": "~1.1.0",
+    "postcss": "~8.4.14",
+    "prettier": "~2.5.1",
+    "sass": "~1.54.0",
+    "sass-loader": "~13.0.2",
+    "unplugin-auto-import": "~0.10.3",
+    "unplugin-vue-components": "~0.21.2",
+    "vite": "~3.0.0",
+    "vue-eslint-parser": "~8.0.1"
+  }
+}

@@ -1,0 +1,79 @@
+$root-font-size: 16px;
+$font-size-12: 12px;
+$font-size-14: 14px;
+$font-size-20: 20px;
+$font-size-32: 32px;
+
+:root {
+    // 全局颜色
+    --theme-color: #17BA76;
+    --border-color: #cbf3e19c;
+    --green-color: #0a9354;
+    --yellow-color: #E6A23C;
+    --pink-color: #F56C6C;
+    --white-color: #ffffff;
+    --grey-color: #cccccc;
+    --default-color: #000;
+    --label-text-color: #535252;
+    --light-grey-border-color: rgba(203, 243, 225, 0.61);
+    --light-grey-background-color: rgba(62, 64, 63, 0.75);
+    --dark-grey-background-color: rgba(62, 64, 63, 1);
+    --default-font-size: 16px;
+    --box-shadow-color: rgba(0, 0, 0, 0.12);
+
+    // 第三方UI组件库颜色
+    --el-color-primary: var(--theme-color);
+    --el-button-active-text-color: var(--theme-color);
+    --el-button-active-border-color: var(--border-color);
+    --el-button-active-bg-color: var(--theme-color);
+    --el-button-hover-bg-color: var(--border-color);
+    --el-button-hover-border-color: var(--theme-color);
+    --el-color-primary-light-3: var(--theme-color);
+    --el-color-primary-light-5: var(--theme-color);
+    --el-color-primary-light-7: var(--theme-color);
+    --el-color-primary-light-8: var(--theme-color);
+    --el-color-primary-dark-2: var(--theme-color);
+}
+
+html {
+    font-size: $root-font-size; // 根字体大小
+    user-select: none;
+}
+
+// mixin & function
+@import './mixin.scss';
+
+// 自定义样式
+@import './customClass.scss';
+
+// 全局样式(官方配置推荐)
+// @forward 'element-plus/theme-chalk/src/common/var.scss' with (
+//   $colors: (
+//     'primary': (
+//       'base': #003261,
+//     ),
+//     'success': (
+//       'base': #21ba45,
+//     ),
+//     'warning': (
+//       'base': #f2711c,
+//     ),
+//     'danger': (
+//       'base': #db2828,
+//     ),
+//     'error': (
+//       'base': #db2828,
+//     ),
+//     'info': (
+//       'base': #42b8dd,
+//     ),
+//   ),
+//   $button-padding-horizontal: (
+//     'default': 80px,
+//   )
+// );
+body,
+html,
+#app {
+    height: 100%;
+}
