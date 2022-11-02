@@ -5,10 +5,8 @@ module.exports = {
     node: true
   },
   extends: [
-    'plugin:vue/vue3-essential',
-    'standard-with-typescript'
-  ],
-  overrides: [
+    'plugin:vue/vue3-strongly-recommended', //    eslint-plugin-vue
+    'standard'
   ],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -18,6 +16,5 @@ module.exports = {
     'vue'
   ],
   rules: {
-    'vue/multi-word-component-names': 0
   }
 }
