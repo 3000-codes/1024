@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -C play dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "3000-codes",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.8.4",
+    "vue": "^3.2.36"
+  },
+  "dependencies": {
+    "@p-plus/components": "workspace:^1.0.0",
+    "@p-plus/utils": "workspace:^1.0.0"
+  }
+}

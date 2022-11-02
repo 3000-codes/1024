@@ -7,6 +7,7 @@ meanless but miss
 + lit.js
 + MPA
 + My Home Page (https://go.itab.link/)
-+ [lerna](https://lerna.js.org/docs/getting-started)
++ ~~[lerna](https://lerna.js.org/docs/getting-started)~~
++  pr-com  [pnpm](https://juejin.cn/post/7101117617233985566)
 
 https://juejin.cn/post/7087134135193436197
