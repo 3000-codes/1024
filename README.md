@@ -9,5 +9,6 @@ meanless but miss
 + My Home Page (https://go.itab.link/)
 + ~~[lerna](https://lerna.js.org/docs/getting-started)~~
 +  pr-com  [pnpm](https://juejin.cn/post/7101117617233985566)
++ [打包](https://segmentfault.com/a/1190000041347837)
 
 https://juejin.cn/post/7087134135193436197
