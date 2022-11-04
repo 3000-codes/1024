@@ -1,0 +1,76 @@
+.yellow {
+    color: var(--yellow-color) !important;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.pink {
+    color: var(--pink-color);
+    font-weight: 700;
+}
+
+.green {
+    color: var(--green-color);
+    font-weight: 700;
+}
+
+.grey {
+    color: var(--grey-color);
+    font-size: $font-size-12;
+    padding: px2rem(5) 0;
+}
+
+.black {
+    color: var(--default-color);
+    font-weight: 700;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.echartContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.headRowCellStyle {
+    font-weight: 400;
+    color: #333;
+    background: #63cf9f4a !important;
+}
+
+.columnCellStyle {
+    font-weight: bolder;
+}
+
+.customTable {
+    width: 100%;
+    margin: 10px 5px 5px 5px;
+}
+
+.menuStyle {
+    .el-menu-item.is-active {
+        background-color: #4ddb9c;
+    }
+
+    .el-menu-item {
+        overflow: hidden;
+        padding: 0 5px !important;
+        height: px2rem(30) !important;
+    }
+}
+
+.flexBox {
+    flex: 1;
+}
