@@ -28,3 +28,25 @@ function isMatched(expr:string):boolean{
   }
   return !stack.length
 }
+export {}
+
+function isValid(s: string): boolean {
+  const map:{[key:string]:string} = {
+    "}": "{",
+    "]": "[",
+    ")": "(",
+  };
+  const temp: string[] = [];
+  let len: number = s.length;
+  for (let i = 0; i < len; i++) {
+    if (s[i] in map) {
+      let cur = temp.pop();
+      if (cur !== map[s[i]]) return false;
+    } else {
+      temp.push(s[i]);
+    }
+  }
+  return !temp.length;
+}
+
+console.log(isValid("()"));
