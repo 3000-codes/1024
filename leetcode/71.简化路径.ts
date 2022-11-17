@@ -11,20 +11,18 @@
  */
 
 // @lc code=start
-function simplifyPath(path: string): string {
-const stack :string[]=[]
-let pathArr=path.split('\/')
-let len=pathArr.length
-for(let i=0;i<len;i++){
-  const cur=pathArr[i]
-  if(cur){
-    if(cur=='..') stack.pop()
-    else if(cur!=='.') stack.push(cur)
+function simplifyPath (path: string): string {
+  const stack :string[] = []
+  const pathArr = path.split('/')
+  const len = pathArr.length
+  for (let i = 0; i < len; i++) {
+    const cur = pathArr[i]
+    if (cur) {
+      if (cur === '..') stack.pop()
+      else if (cur !== '.') stack.push(cur)
+    } else continue
   }
-  else continue
-}
 
-return len?'/'+stack.join('/'):'/'
+  return len ? '/' + stack.join('/') : '/'
 };
 // @lc code=end
-
