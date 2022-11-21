@@ -5,16 +5,15 @@
  */
 
 // @lc code=start
-function isPalindrome(x: number): boolean {
-  if(x<0) return false
-  let str=x.toString()
-  let start=0,end=str.length-1
-  while(start<end){
-    if(str[start]!==str[end]) return false
+function isPalindrome (x: number): boolean {
+  if (x < 0) return false
+  const str = x.toString()
+  let start = 0; let end = str.length - 1
+  while (start < end) {
+    if (str[start] !== str[end]) return false
     start++
     end--
   }
   return true
 };
 // @lc code=end
-
