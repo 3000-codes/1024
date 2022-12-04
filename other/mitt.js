@@ -21,13 +21,13 @@ function miit(all) {
         }
       }
     },
-    emit(type, args) {//发送事件类型和参数
-      const hanlders = all.get(type)
+    emit(type, args) {//通知类型的所有事件并传递参数
+      let hanlders = all.get(type)
       if (hanlders) {
         hanlders.forEach(hanlder => hanlder(args))
       }
       // NOTE:下面的没有任何用
-      hanlders.get('*')
+      handlers =  all.get('*')
       if (hanlders) {
         hanlders.forEach(hanlder => hanlder(args))
       }
