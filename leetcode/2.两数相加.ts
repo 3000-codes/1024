@@ -30,26 +30,22 @@ function addTwoNumbers (l1: ListNode | null, l2: ListNode | null): ListNode | nu
   let tail = null
   let carry = 0
   while (l1 || l2) {
-    const n1 = l1?.val || 0
-    const n2 = l2?.val || 0
+    const n1 = l1.val ? l1.val : 0
+    const n2 = l2.val ? l2.val : 0
     const sum = n1 + n2 + carry
     if (head) {
       tail.next = new ListNode(sum % 10)
       tail = tail.next
     } else {
+      // 没有head创建第一个,同时也是tail
       head = tail = new ListNode(sum % 10)
     }
     carry = sum > 10 ? 1 : 0
-    if (l1) {
-      l1 = l1.next
-    }
-    if (l2) {
-      l2 = l2.next
-    }
+    if (l1) l1 = l1.next
+    if (l2) l2 = l2.next
   }
-  if (carry > 0) {
-    tail.next = new ListNode(carry)
-  }
+  if (carry > 0) tail.next = new ListNode(carry)
+
   return head
 };
 // @lc code=end
