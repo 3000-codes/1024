@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode.cn id=206 lang=typescript
+ * @lc app=leetcode.cn id=83 lang=typescript
  *
- * [206] 反转链表
+ * [83] 删除排序链表中的重复元素
  */
 
 // @lc code=start
@@ -17,14 +17,16 @@
  * }
  */
 
-function reverseList (head: ListNode | null): ListNode | null {
-  let p1 = head; let p2 = null
-  while (p1) {
-    const tmp = p1.next// 暂存前节点
-    p1.next = p2// 续接前链表
-    p2 = p1// 交换值
-    p1 = tmp// 交换值
+function deleteDuplicates (head: ListNode | null): ListNode | null {
+  let p1 = head
+  while (p1 && p1.next) {
+    if (p1.val === p1.next.val) {
+      p1.next = p1.next.next
+    //   p1.val = p1.next.val
+    } else {
+      p1 = p1.next
+    }
   }
-  return p2
+  return head
 };
 // @lc code=end
