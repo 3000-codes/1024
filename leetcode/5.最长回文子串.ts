@@ -5,23 +5,20 @@
  */
 
 // @lc code=start
+function isPalindromeStr (s: string): boolean {
+  return s === s.split('').reverse().join('')
+}
 function longestPalindrome (s: string): string {
-  const len = s.length
-  const max = 1
-  let index = 1
-  for (let i = 1; i < len - 1; i++) {
-    const str = s[i]
-    let count = 1; let left = i - 1; let right = i + 1
-    while (s[left] === s[right] && left > -1 && right <= len) {
-      count++
-      left -= count
-      right += count
-      if (count > max) {
-        index = i
+  let result = ''
+  for (let i = 0; i < s.length; i++) {
+    for (let j = i + 1; j <= s.length; j++) {
+      const str = s.slice(i, j)
+      if (isPalindromeStr(str) && str.length > result.length) {
+        result = str
       }
     }
-  };
-  return index + ''
+  }
+  return result
 }
 console.log(longestPalindrome('babad'))
 

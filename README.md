@@ -3,7 +3,7 @@ meanless but miss
 
 ## TODO LIST
 + Antv X6
-+ eslint + prettier
++ ~~eslint + prettier~~
 + lit.js
 + My Home Page (https://go.itab.link/)
 + ~~[lerna](https://lerna.js.org/docs/getting-started)~~
