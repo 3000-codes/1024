@@ -1,19 +1,35 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import { ref, onMounted } from 'vue'
+import { Observable } from 'rxjs'
+const count = ref<number>(0)
+const test = ref<HTMLDivElement>()
+const increment = () => {
+  count.value++
+  fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then(response => response.json())
+    .then(json => console.log(json))
+}
+onMounted(() => {
+  Observable.create((observer: any) => {
+    observer.next(1)
+    observer.next(2)
+    observer.next(3)
+    observer.complete()
+  }).subscribe((x: any) => console.log(x))
+})
 </script>
 
 <template>
+  <p>{{ count }}</p>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    ddd
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <button
+    @click="increment"
+    ref="test"
+  >
+    点击
+  </button>
 </template>
 
 <style scoped>
