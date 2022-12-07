@@ -9,13 +9,19 @@ const increment = () => {
     .then(response => response.json())
     .then(json => console.log(json))
 }
+const observer = {
+  next: (x: any) => console.log('Observer got a next value: ' + x),
+  error: (err: any) => console.error('Observer got an error: ' + err),
+  complete: () => console.log('Observer got a complete notification')
+}
 onMounted(() => {
-  Observable.create((observer: any) => {
-    observer.next(1)
-    observer.next(2)
-    observer.next(3)
-    observer.complete()
-  }).subscribe((x: any) => console.log(x))
+  const observable$ = new Observable((subscriber: any) => {
+    subscriber.next(1)
+    subscriber.next(2)
+    subscriber.next(3)
+    subscriber.complete()
+  })
+  observable$.subscribe(observer)
 })
 </script>
 
