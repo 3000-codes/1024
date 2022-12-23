@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { Observable } from 'rxjs'
+import PropFnVue from './components/PropFn.vue'
 const count = ref<number>(0)
 const test = ref<HTMLDivElement>()
 const increment = () => {
@@ -23,9 +24,17 @@ onMounted(() => {
   })
   observable$.subscribe(observer)
 })
+const msg = ref('default msg')
+const changeMsg = (e:MouseEvent) => {
+  msg.value = 'change msg'
+}
 </script>
 
 <template>
+  <PropFnVue
+    :msg="msg"
+    :change-msg="changeMsg"
+  />
   <p>{{ count }}</p>
   <div>
     ddd
