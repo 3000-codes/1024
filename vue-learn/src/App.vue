@@ -1,50 +1,11 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import { Observable } from 'rxjs'
-import PropFnVue from './components/PropFn.vue'
-const count = ref<number>(0)
-const test = ref<HTMLDivElement>()
-const increment = () => {
-  count.value++
-  fetch('https://jsonplaceholder.typicode.com/todos/1')
-    .then(response => response.json())
-    .then(json => console.log(json))
-}
-const observer = {
-  next: (x: any) => console.log('Observer got a next value: ' + x),
-  error: (err: any) => console.error('Observer got an error: ' + err),
-  complete: () => console.log('Observer got a complete notification')
-}
-onMounted(() => {
-  const observable$ = new Observable((subscriber: any) => {
-    subscriber.next(1)
-    subscriber.next(2)
-    subscriber.next(3)
-    subscriber.complete()
-  })
-  observable$.subscribe(observer)
-})
-const msg = ref('default msg')
-const changeMsg = (e:MouseEvent) => {
-  msg.value = 'change msg'
-}
+import ReduxTest from './test-demo/ReduxTest.vue'
+
 </script>
 
 <template>
-  <PropFnVue
-    :msg="msg"
-    :change-msg="changeMsg"
-  />
-  <p>{{ count }}</p>
-  <div>
-    ddd
-  </div>
-  <button
-    @click="increment"
-    ref="test"
-  >
-    点击
-  </button>
+  <div>主页</div>
+  <ReduxTest />
 </template>
 
 <style scoped>
