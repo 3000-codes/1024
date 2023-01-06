@@ -5,10 +5,15 @@ type CounterAction = {
   payload: number
 }
 const actionTypes: ActionType[] = ['INCREMENT', 'DECREMENT']
-
+type Action ={
+  // eslint-disable-next-line no-unused-vars
+  [key in ActionType]: {
+    value: number
+  }
+}
 function counterReducer (state = { value: 18 }, action: CounterAction) {
   console.log('dispatched', action)
-  const actions = {
+  const actions:Action = {
     INCREMENT: { value: state.value + action.payload },
     DECREMENT: { value: state.value - action.payload }
   }
