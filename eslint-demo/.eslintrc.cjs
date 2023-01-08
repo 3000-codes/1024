@@ -14,5 +14,7 @@ module.exports = {
     rules: {
         // 双引号
         quotes: ["error", "double"],
+        // 末尾分号
+        semi: ["error", "always"],
     },
-}
+};

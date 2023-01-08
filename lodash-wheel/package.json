@@ -6,13 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx,.vue src",z
   },
   "devDependencies": {
     "typescript": "^4.9.3",
     "vite": "^4.0.0"
   },
   "dependencies": {
+    "@lotool/core": "workspace:^1.0.0",
     "lodash": "^4.17.21"
   }
 }

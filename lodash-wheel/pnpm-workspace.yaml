@@ -1,3 +1,8 @@
 packages: 
-  - "packages/**" # monorepo packages
+  # 所有直属packages里面的lib
+  - "packages/*" 
+  #  所有components里面的lib
+  - 'components/**'
   - play 
+  # exclude packages that are inside test directories
+  - '!**/test/**'
