@@ -1,7 +1,7 @@
 const map:Map<number,number> = new Map();
 export function getDays(n: number): number {
   if (n < 2) return n;
-  if (map.has(n)) return map.get(n);
+  if (map.has(n)) return map.get(n) as number;
   const res = Math.min(
     (n % 2) + 1 + getDays(Math.floor(n / 2)),
     (n % 3) + 1 + getDays(Math.floor(n / 3))
