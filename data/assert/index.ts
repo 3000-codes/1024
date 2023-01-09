@@ -1,7 +1,16 @@
-export default  function formm (data) {
-  const result = []
+type Item={
+  label:string,
+  value?:string,
+  children?:Item[]
+}
+type Data={
+  [key:string]:string|{val:string,items:Data}
+
+}
+export default  function formm (data:Data):Item[] {
+  const result:Item[] = []
   Object.entries(data).forEach(([key, value]) => {
-    const tem = {
+    const tem:Item = {
       label: key
     }
     if (typeof value === 'string') {

@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@lotool/core": "workspace:^1.0.0",
+    "@types/node": "^18.11.18",
     "lodash": "^4.17.21"
   }
 }

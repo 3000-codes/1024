@@ -1,6 +1,6 @@
 const toString = Object.prototype.toString
 
-function getTag(value) {
+function getTag(value:unknown):string {
   if (value == null) {
     return value === undefined ? '[object Undefined]' : '[object Null]'
   }

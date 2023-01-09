@@ -12,8 +12,9 @@ const WINDOW_THIS=typeof self==='object'&&self!==null&&self.Object===Object&&sel
 
 // 全局对象的Function构造函数返回this必然是全局对象
 
-const FUNCTION_THIS=Function('return this')();
+const FUNCTION_THIS=new Function('return this')();
 
 const REAL_THIS=NODE_THIS||GLOBAL_THIS||WINDOW_THIS||FUNCTION_THIS;
 
 export default REAL_THIS;
+
