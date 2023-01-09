@@ -1,12 +1,15 @@
+
 (() => {
-  function padZero (num, n) {
-    return (Array(n).join(0) + num).slice(-n)
+  type PadZero = (num: number, n: number) => string
+  const padZero: PadZero = (num, n) => {
+    return (Array(n).join('0') + num).slice(-n)
   }
 
-  function padZero2 (num, n) {
-    return String.prototype.padStart.call(num, n, 0)
+  const padZero2: PadZero = (num, n) => {
+    return String.prototype.padStart.call(num, n, '0')
   }
-  function padZero3 (num, n) {
+
+  const padZero3: PadZero = (num, n) => {
     return ('0'.repeat(n) + num).slice(-n)
   }
 

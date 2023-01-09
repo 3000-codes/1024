@@ -1,4 +1,6 @@
-const errorFirstMaker=(promise)=>promise.then(res=>[null,res],err=>[err])
+type ErrorFirst<T>=[Error|null,T?]
+type Maker=(promise:Promise<unknown>)=>Promise<ErrorFirst<unknown>>
+const errorFirstMaker:Maker=(promise)=>promise.then(res=>[null,res],err=>[err])
 
 const p1= Promise.resolve('success')
 const p2=Promise.reject('failed')

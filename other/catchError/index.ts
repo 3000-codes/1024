@@ -1,8 +1,11 @@
+/* eslint-disable prefer-promise-reject-errors */
 (() => {
-  const fn = () => Promise.reject('error')
-  const fn2 = () => Promise.resolve(['error'])
+  type ErrorPromise=()=>Promise<string|never>
+  type NormalPromise=()=>Promise<string[]>
+  const fn:ErrorPromise = () => Promise.reject('error')
+  const fn2:NormalPromise = () => Promise.resolve(['error'])
 
-  async function test () {
+  async function test (...args:unknown[]):Promise<void> {
     console.time('test fn')
     for (let index = 0; index < 100000; index++) {
       try {
