@@ -12,7 +12,8 @@
   console.log(obj.getA()); // => 2
   const getA = obj.getA;
   console.log(getA()); // => 1
-  console.log((0, obj.getA)()); // => 1
+  console.log((void 0, obj.getA)()); // => 1
+  console.log((obj.getA)()); // => 2
 })(globalThis);
 
 (function (_self) {
