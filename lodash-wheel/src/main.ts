@@ -2,8 +2,12 @@
 import "./style.css";
 import typescriptLogo from "./typescript.svg";
 import { setupCounter } from "./counter";
-import add from "@lotool/core";
+import add,{isPositive,isNegativeZero,isNegativeZero2} from "@lotool/core";
 console.log(add(1, 2));
+console.log(isPositive(1));
+console.log(isNegativeZero(-0));
+console.log(isNegativeZero2(-0));
+
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
