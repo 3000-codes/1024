@@ -30,4 +30,9 @@
     padZero3(i, 6)
   }
   console.timeEnd('padZero3') // 79.47509765625 ms
+  console.time('padStart')
+  for (let i = 0; i < 1000000; i++) {
+    String.prototype.padStart.call(i, 6, '0')
+  }
+  console.timeEnd('padStart') // 30.97509765625 ms
 })()
