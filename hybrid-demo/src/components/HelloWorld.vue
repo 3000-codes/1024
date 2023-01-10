@@ -1,12 +1,17 @@
 <script setup lang="ts">
+import { inject } from "vue";
 defineProps<{
   msg: string;
 }>();
+const myId = inject("myId");
+const princreament = inject("princreament", () => {}, false);
 </script>
 
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
+    <h2>{{ myId }}</h2>
+    <h3><button @click="princreament">princreament</button></h3>
   </div>
 </template>
 

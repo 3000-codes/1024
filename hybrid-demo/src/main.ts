@@ -1,12 +1,20 @@
 import { createApp, ref } from "vue";
 import App from "./App.vue";
 import "./assets/main.css";
-globalThis.nums = ref(0);
-globalThis.addNum = () => nums.value++;
-const createMyApp = () => createApp(App, { nums: nums.value, addNum });
-const app1 = createMyApp();
-const app2 = createMyApp();
-const app3 = createMyApp();
+import { createPinia } from "pinia";
+const myId = ref(10086);
+const princreament = () => {
+  myId.value++;
+};
+App.provide = {
+  myId,
+  princreament,
+};
+const createMyApp = (appName: string) =>
+  createApp(App, { appName }).use(createPinia());
+const app1 = createMyApp("app1");
+const app2 = createMyApp("app2");
+const app3 = createMyApp("app3");
 
 app1.mount("#app1");
 app2.mount("#app2");

@@ -1,20 +1,22 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
-const num = ref(0);
-defineProps<{ nums: number; addNum: () => void }>();
+
+import { useStore } from "./store/index";
+const store = useStore();
+defineProps({
+  appName: {
+    type: String,
+    default: "Hello World",
+  },
+});
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      {{ num }}
-      <HelloWorld msg="You did it!" />
-      {{ nums }}
-      <button @click="num++">jia</button>
-      <button @click="addNum()">jia</button>
-    </div>
-  </header>
+  <h2>我是{{ appName }}</h2>
+  <h3>{{ store.count }}</h3>
+  <button @click="store.increment">increment</button>
+  <HelloWorld msg="=====" />
+  <hr />
 </template>
 
 <style scoped>
