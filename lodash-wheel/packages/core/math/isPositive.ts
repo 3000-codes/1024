@@ -4,5 +4,5 @@ export default function isPositive(value: number|string): boolean {
     value = parseFloat(value);
   }
 
-  return value > 0;
+  return value > 0&&value<Number.MAX_SAFE_INTEGER;
 }
