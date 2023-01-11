@@ -112,3 +112,34 @@ while(node){
 }
 ```
 
+
+### 数组for遍历快慢
+常见遍历方式
+```ts
+// 正序
+let i=0,len=arr.length;
+for(;i<len;i++){}
+
+let i,len
+for(i=0,len=arr.length;i<len;i++){}
+
+for(let i=0,len=arr.length;i<len;i++){}
+
+for(let i=0;i<arr.length;i++){}
+
+// 逆序
+let i=arr.length
+for(;i--;){}
+
+for(let i=arr.length;i--;){}
+
+let i=arr.length-1
+for(;i>-1;i--){}
+
+for(let i=arr.length-1;i>-1;i--){}
+```
+运行时间第一次数最多的 8 :4次  1/2/4/7各2次
+运行时间第二次数最多的(排除8) 1 :3次  2/6/7各2次
+运行时间第三次数最多的(排除1,8) 2 :4次  6 :3次  5 :2次
+
+大致断定8>2≈1>7≈6>5
