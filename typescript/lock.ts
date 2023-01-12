@@ -1,7 +1,11 @@
+type LockItem = {
+  resolve: Function;
+  reject: Function;
+};
 // 线程锁
 let isLock = false;
-let lockList = [];
-async function lock() {
+let lockList: LockItem[] = [];
+async function lock():Promise<Function> {
   function unlock() {
     let waitFunc = lockList.shift();
     if (waitFunc) {
@@ -20,8 +24,8 @@ async function lock() {
   }
 }
 //使用
-let unlock = await lock();
-
-//xxxxxxxxxxxxxx
-
-unlock();
+(async function () {
+  let unlock = await lock();
+  //xxxxxxxxxxxxxx
+  unlock();
+})();
