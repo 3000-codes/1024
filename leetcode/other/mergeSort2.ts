@@ -5,11 +5,14 @@ const merge = (nums:number[], left:number, mid:number, right:number) => {
   // 初始化辅助数组
   const tmp = nums.slice(left, right + 1)
   // 左子数组的起始索引和结束索引
-  const leftStart = left - left; const leftEnd = mid - left
+  const leftStart = left - left
+  const leftEnd = mid - left
   // 右子数组的起始索引和结束索引
-  const rightStart = mid + 1 - left; const rightEnd = right - left
+  const rightStart = mid + 1 - left
+  const rightEnd = right - left
   // i, j 分别指向左子数组、右子数组的首元素
-  let i = leftStart; let j = rightStart
+  let i = leftStart
+  let j = rightStart
   for (let k = left; k <= right; k++) {
     // 若“左子数组已全部合并完”，则选取右子数组元素，并且 j++
     if (i > leftEnd) {
