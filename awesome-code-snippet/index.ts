@@ -72,8 +72,17 @@
   // But in edge, the time difference is nearly 1000ms.
 })();
 (function () {
-  // js不存在深克隆
+  // js不存在深克隆?
   const a:any={}
   a.a=a;
   const b=JSON.parse(JSON.stringify(a));
+})();
+(function () {
+  // 深克隆 需要考虑的问题
+  // 1.数据类型=>基本类型直接返回,引用类型递归
+  // 2.特殊类型=>正则,日期,函数(native or 自定义)...
+  // 3.特殊键名=>Symbol, __proto__, constructor(是否需要继承)
+  // 4.是否可枚举=>for...in, Object.keys, Object.getOwnPropertyNames, Object.getOwnPropertySymbols
+  // 5.循环引用=>Map,weakMap
+  
 })();
