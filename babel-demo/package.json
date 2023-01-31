@@ -1,0 +1,26 @@
+{
+  "name": "babel-demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/generator": "^7.20.14",
+    "@babel/parser": "^7.20.13",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/template": "^7.20.7",
+    "@babel/traverse": "^7.20.13",
+    "@babel/types": "^7.20.7",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0"
+  },
+  "dependencies": {
+    "@types/babel__traverse": "^7.18.3"
+  }
+}

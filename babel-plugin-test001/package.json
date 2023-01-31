@@ -1,0 +1,24 @@
+{
+  "name": "babel-plugin-test001",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/parser": "^7.20.13",
+    "@babel/preset-env": "^7.20.2",
+    "mocha": "^2.2.5",
+    "vite": "^4.0.4"
+  },
+  "scripts": {
+    "clean": "rmdir /s/q lib",
+    "build": "babel src -d lib",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:watch": "npm run test -- --watch",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "keywords": []
+}

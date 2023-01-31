@@ -86,3 +86,9 @@
   // 5.循环引用=>Map,weakMap
   
 })();
+
+(async()=>{
+  // 前端拥有读取根目录下文件的能力
+  const html = await fetch('/').then(res => res.text());//读取index html
+  return html
+})()
