@@ -91,4 +91,15 @@
   // 前端拥有读取根目录下文件的能力
   const html = await fetch('/').then(res => res.text());//读取index html
   return html
-})()
+})();
+
+(function () {
+  // 移除指定位置的数组元素
+  const arr=[1,2,3,4,5];
+  // arr.splice(2,1);
+  function removeElement(arr:unknown[],from:number,to:number){
+    const rest=arr.slice((to||from)+1||arr.length);
+    arr.length=from<0?arr.length+from:from;
+    arr.push(...rest);
+  }
+})();

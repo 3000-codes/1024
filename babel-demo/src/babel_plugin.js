@@ -35,6 +35,5 @@ export default function(babel) {
     manipulateOptions(opts, parserOpts) {
       parserOpts.plugins.push("jsx");
     }
-
   };
 }
