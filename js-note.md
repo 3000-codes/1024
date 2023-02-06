@@ -65,7 +65,7 @@ delete obj.x  // => true
 
 ### 变量的声明方式
 严格意义上说应该为变量和常量
-声明变量的方式:var let function clasee
+声明变量的方式:var let function class
 声明常量的方式:const import 
 未通过声明方式产生的变量:try catch(error)
 ```js
@@ -143,3 +143,15 @@ for(let i=arr.length-1;i>-1;i--){}
 运行时间第三次数最多的(排除1,8) 2 :4次  6 :3次  5 :2次
 
 大致断定8>2≈1>7≈6>5
+
+```ts
+(function () {
+  // 深克隆 需要考虑的问题
+  // 1.数据类型=>基本类型直接返回,引用类型递归
+  // 2.特殊类型=>正则,日期,函数(native or 自定义)...
+  // 3.特殊键名=>Symbol, __proto__, constructor(是否需要继承)
+  // 4.是否可枚举=>for...in, Object.keys, Object.getOwnPropertyNames, Object.getOwnPropertySymbols
+  // 5.循环引用=>Map,weakMap
+})();
+
+```
