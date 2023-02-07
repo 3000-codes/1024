@@ -6,7 +6,7 @@ const test = ref<HTMLDivElement>()
 const increment = () => {
   count.value++
 }
-
+const lb = ref<User>()
 const msg = ref('default msg')
 const changeMsg = (e: MouseEvent) => {
   msg.value = 'change msg'
@@ -20,6 +20,7 @@ const changeMsg = (e: MouseEvent) => {
     :change-msg="changeMsg"
   />
   <p>{{ count }}</p>
+  <p>{{ lb?.name }}</p>
   <button
     @click="increment"
     ref="test"
