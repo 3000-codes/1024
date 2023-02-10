@@ -1,5 +1,5 @@
 type SquareProps = {
-  value: string;
+  value: string|null;
   onClick: () => void;
 }
 

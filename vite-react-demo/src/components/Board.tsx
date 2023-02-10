@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Square from './Square'
 
 export default function Board() {
-  const [squares, setSquares] = useState(Array(9).fill(null));
+  const [squares, setSquares] = useState<(string | null)[]>(Array.from({ length: 9 }, () => null));
   const [xIsNext, setXIsNext] = useState(true);
   const calculateWinner = (squares: Array<string | null>) => {
     const lines = [
@@ -23,15 +23,23 @@ export default function Board() {
     }
     return null;
   }
+
   const handleClick = (i: number) => {
     const squaresCopy = [...squares];
-    squaresCopy[i] = xIsNext ? 'X' : 'O';
-    setSquares(squaresCopy);
-    setXIsNext(!xIsNext);
-    const winner = calculateWinner(squaresCopy);
+    let winner = calculateWinner(squaresCopy);
     if (winner) {
       alert(`Winner: ${winner}`);
       console.log(winner)
+      return
+    }
+    squaresCopy[i] = xIsNext ? 'X' : 'O';
+    setSquares(squaresCopy);
+    setXIsNext(!xIsNext);
+    winner = calculateWinner(squaresCopy);
+    if (winner) {
+      alert(`Winner: ${winner}`);
+      console.log(winner)
+      return
     }
   };
   const renderSquare = (i: number) => {

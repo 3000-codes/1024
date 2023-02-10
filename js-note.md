@@ -144,6 +144,8 @@ for(let i=arr.length-1;i>-1;i--){}
 
 大致断定8>2≈1>7≈6>5
 
+
+## 深克隆
 ```ts
 (function () {
   // 深克隆 需要考虑的问题
@@ -154,4 +156,31 @@ for(let i=arr.length-1;i>-1;i--){}
   // 5.循环引用=>Map,weakMap
 })();
 
+```
+
+## 原型链与赋值操作 
+```ts
+  // "use strict";
+  const obj={
+    value:1,
+  }
+  let _foo=1;
+  Object.defineProperty(obj,'a',{
+    value:1,
+    writable:false,
+  })
+  Object.defineProperty(obj,'foo',{
+    set(v) {
+      _foo=v;
+    },
+    get() {
+      return _foo;
+    }
+  })
+  const bar=Object.create(obj);
+  bar.value=2; // 正常赋值,不会影响原型链上的值
+  bar.a=2; //  严格模式下: TypeError: Cannot assign to read only property 'a' of object '#<Object>'
+  console.log(bar.a); 
+  bar.foo=2;
+  console.log(bar);//{}
 ```
