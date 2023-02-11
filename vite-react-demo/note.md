@@ -1,11 +1,16 @@
 函数组件
 + 静态组件 ,一次渲染后不会再次渲染,除非父组件重新渲染
++ 无生命周期
+
 PureComponent与Component
 
 + PureComponent 会对props和state进行浅比较,如果有变化,则重新渲染
 + PureComponent 相当于Component+shouldComponentUpdate
 
 forwordRef
++ 高阶组件,用于转发ref
++ 用于转发ref,使得父组件可以获取子组件的ref
+
 setState(state, callback)
 + state: 可以是对象,也可以是函数
 + callback: 可选,在state更新后执行
