@@ -20,3 +20,4 @@ setState(state, callback)
   - 在时间段内,将多次setState合并成一个updater
   - 此时状态/视图未更新
   - 所有代码执行完毕后,执行updater,更新状态/视图
+ps:在react16中,在事件处理函数中,setState是同步的

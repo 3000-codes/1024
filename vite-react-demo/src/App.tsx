@@ -3,17 +3,18 @@ import './App.css'
 
 // import List from './components/List'
 // import RefCom from './components/RefCom'
-// import StateCom from './components/StateCom'
+// // import StateCom from './components/StateCom'
 // import TouchCom from './components/TouchCom'
 import LoopBinding from './components/LoopBinding'
-
+// import EventCom from './components/EventCom'
 function App() {
   const [count, setCount] = useState(0)
   // return <List />
   // return <RefCom />
-  // return <StateCom />
+  // // return <StateCom />
   // return <TouchCom />
   return <LoopBinding />
+  // return <EventCom />
 }
 
 
