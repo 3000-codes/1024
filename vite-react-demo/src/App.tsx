@@ -5,16 +5,18 @@ import './App.css'
 // import RefCom from './components/RefCom'
 // // import StateCom from './components/StateCom'
 // import TouchCom from './components/TouchCom'
-import LoopBinding from './components/LoopBinding'
+// import LoopBinding from './components/LoopBinding'
 // import EventCom from './components/EventCom'
+import EffectCom from './components/EffectCom'
 function App() {
   const [count, setCount] = useState(0)
   // return <List />
   // return <RefCom />
   // // return <StateCom />
   // return <TouchCom />
-  return <LoopBinding />
+  // return <LoopBinding />
   // return <EventCom />
+  return <EffectCom  count={18}/>
 }
 
 

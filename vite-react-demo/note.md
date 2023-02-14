@@ -41,3 +41,9 @@ function handleClick() {
 + useState可以接受一个函数作为参数,该函数的返回值作为初始state
 + useState的更新函数可以接受一个函数作为参数,该函数的返回值作为新的state,该函数接受一个参数,为当前的state,返回值为新的state
 + useState的更新函数可以接受一个对象作为参数,该参数会覆盖原状态
+
+
+useEffect
++ useEffect接受一个函数作为参数,该函数会在组件渲染后执行
++ useEffect接受第二个参数,该参数为一个数组,数组中的元素为依赖项,当依赖项发生变化时,会执行useEffect中的函数
++ useEffect返回一个函数,该函数会在组件卸载前执行
