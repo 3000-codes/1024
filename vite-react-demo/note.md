@@ -21,3 +21,23 @@ setState(state, callback)
   - 此时状态/视图未更新
   - 所有代码执行完毕后,执行updater,更新状态/视图
 ps:在react16中,在事件处理函数中,setState是同步的
+
+flushSync
++ 用于同步执行任务,可以使得setState同步执行
+```js
+function handleClick() {
+  flushSync(() => {
+    setCount(3);
+    setFlag(true);
+  });
+  // setCount 和 setFlag 为批量更新，结束后
+  setLoading(false);
+  // 此方法会触发两次 render
+}
+```
+
+函数式组件的useState
++ useState返回一个数组,第一个元素是state,第二个元素是更新state的函数
++ useState可以接受一个函数作为参数,该函数的返回值作为初始state
++ useState的更新函数可以接受一个函数作为参数,该函数的返回值作为新的state,该函数接受一个参数,为当前的state,返回值为新的state
++ useState的更新函数可以接受一个对象作为参数,该参数会覆盖原状态
