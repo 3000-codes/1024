@@ -7,7 +7,8 @@ import './App.css'
 // import TouchCom from './components/TouchCom'
 // import LoopBinding from './components/LoopBinding'
 // import EventCom from './components/EventCom'
-import EffectCom from './components/EffectCom'
+// import EffectCom from './components/EffectCom'
+import LayoutEfCom from './components/LayoutEfCom'
 function App() {
   const [count, setCount] = useState(0)
   // return <List />
@@ -16,7 +17,8 @@ function App() {
   // return <TouchCom />
   // return <LoopBinding />
   // return <EventCom />
-  return <EffectCom  count={18}/>
+  // return <EffectCom  count={18}/>
+  return <LayoutEfCom count={count} />
 }
 
 

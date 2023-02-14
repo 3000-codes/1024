@@ -44,6 +44,11 @@ function handleClick() {
 
 
 useEffect
-+ useEffect接受一个函数作为参数,该函数会在组件渲染后执行
++ useEffect接受一个函数作为参数时,该函数会在组件渲染后执行,等价于`componentDidMount`和`componentDidUpdate`
 + useEffect接受第二个参数,该参数为一个数组,数组中的元素为依赖项,当依赖项发生变化时,会执行useEffect中的函数
+  - 当依赖项为空时,只会在组件挂载时执行,等价于`componentDidMount`
+  - 当依赖项为`[state]`时,只会在state发生变化时执行,vue中的`watch`
 + useEffect返回一个函数,该函数会在组件卸载前执行
+
+useLayoutEffect
++ 与useEffect类似,但是会在DOM更新后执行,而不是在浏览器渲染后执行
