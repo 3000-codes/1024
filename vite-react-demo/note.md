@@ -51,4 +51,7 @@ useEffect
 + useEffect返回一个函数,该函数会在组件卸载前执行
 
 useLayoutEffect
++ 执行在useEffect之前
 + 与useEffect类似,但是会在DOM更新后执行,而不是在浏览器渲染后执行
++ 一般用于获取DOM的宽高等信息
++ 会阻塞浏览器渲染,会阻塞用户交互,不要在useLayoutEffect中执行耗时操作
