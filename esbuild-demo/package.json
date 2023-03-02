@@ -1,0 +1,17 @@
+{
+  "name": "esbuild-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build":"esbuild app.tsx --bundle --outfile=dist/app.js --minify --sourcemap --target=es2015 --format=esm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.17.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
