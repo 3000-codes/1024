@@ -1,12 +1,12 @@
 import Head from "next/head";
-import { useState } from "react";
+import { FormEventHandler, FormEvent, useState } from "react";
 import styles from "./index.module.css";
 
 export default function Home() {
   const [animalInput, setAnimalInput] = useState("");
   const [result, setResult] = useState();
 
-  async function onSubmit(event: HTMLFormElement) {
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     try {
       const response = await fetch("/api/generate", {
