@@ -1,6 +1,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 export default defineComponent({
+  name: 'LifeCycle',
   data () {
     return {
       msg: 'hello world',

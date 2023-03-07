@@ -1,4 +1,4 @@
-declare type User={
+export declare type User={
   id:number,
   name:string,
   [key:string]:unknown

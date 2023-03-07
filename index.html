@@ -1,0 +1,31 @@
+<div id="app">
+  <cmp1 />
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+  let cmp1;
+  cmp1 = {
+    template: '<div>{{message}}</div>',
+    data:(_this) =>{
+      console.log(_this);
+      return {
+        message: 'Hello Vue.js!'
+      }
+    },
+    mounted(_this) {
+      console.log(this, cmp1);
+      cmp1.message = 'Hello Vue.js! (mounted)'
+
+      console.log('cmp1 mounted')
+    },
+  }
+  new Vue({
+    el: '#app',
+    data: {
+      message: 'Hello Vue.js!'
+    },
+    components: {
+      cmp1,
+    },
+  })
+</script>

@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import ReduxTest from './test-demo/ReduxTest.vue'
-import tsx from './test-demo/tsx.vue'
-import LifeCycle from './components/LifeCycle.vue'
+// import ReduxTest from './test-demo/ReduxTest.vue'
+// import tsx from './test-demo/tsx.vue'
+// import LifeCycle from './components/LifeCycle.vue'
+
 </script>
 
 <template>
   <div>主页</div>
-  <ReduxTest />
-  <tsx />
+  <!-- <ReduxTest />
+  <tsx /> -->
   <LifeCycle />
 </template>
 
