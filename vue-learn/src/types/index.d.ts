@@ -1,4 +1,4 @@
-export declare type User={
+declare interface User{
   id:number,
   name:string,
   [key:string]:unknown
