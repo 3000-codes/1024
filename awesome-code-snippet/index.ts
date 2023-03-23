@@ -98,6 +98,7 @@
 (function () {
 // 声明语句(var,let,const)没有返回值
 // 表达式语句(函数调用,赋值,运算符)有返回值(实际上是返回 变量的值)
+[1,2,3,4].reduce((pre,cur,i)=>pre+=cur,0); // 10
 // 语句块({})没有返回值
 var a=1; // undefined
 a=2; // 2
@@ -108,7 +109,7 @@ var b=a=3; // 3
 
 // 通过 var声明的全局变量无法通过delete删除 但是隐式声明的全局变量可以
 
-[1,2,3,4].reduce((pre,cur,i)=>pre+=cur,0); // 10
+
 }
 )();
 (function () {
