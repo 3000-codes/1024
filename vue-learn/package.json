@@ -12,6 +12,7 @@
     "@reactivex/rxjs": "^6.6.7",
     "@reduxjs/toolkit": "^1.9.1",
     "@vueuse/core": "^9.10.0",
+    "element-plus": "^2.3.1",
     "redux": "^4.2.0",
     "rxjs": "7.6.0",
     "vue": "^3.2.41"

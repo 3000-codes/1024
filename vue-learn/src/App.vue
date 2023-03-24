@@ -1,15 +1,25 @@
 <script setup lang="ts">
 // import ReduxTest from './test-demo/ReduxTest.vue'
 // import tsx from './test-demo/tsx.vue'
-// import LifeCycle from './components/LifeCycle.vue'
+import LifeCycle from './components/LifeCycle.vue'
+import { ref } from 'vue'
 
+const lc = ref()
+
+const test = () => {
+  console.log(lc)
+
+  lc.value?.changeMsg()
+}
 </script>
 
 <template>
-  <div>主页</div>
+  <div @click="test">
+    主页
+  </div>
   <!-- <ReduxTest />
   <tsx /> -->
-  <LifeCycle />
+  <LifeCycle ref="lc"/>
 </template>
 
 <style scoped>

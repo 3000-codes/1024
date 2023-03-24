@@ -8,6 +8,7 @@ export default defineComponent({
       show: true
     }
   },
+  expose: ['changeMsg'],
   methods: {
     changeMsg () {
       this.msg = 'hello vue3'
