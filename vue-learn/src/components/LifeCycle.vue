@@ -21,7 +21,6 @@ export default defineComponent({
   updated () {
     console.log('updated')
   }
-
 })
 </script>
 <template>

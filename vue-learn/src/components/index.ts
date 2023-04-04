@@ -29,14 +29,14 @@ import { Component } from 'vue'
 // export { default as LifeCycle } from './LifeCycle.vue'
 // export { default as PropFn } from './PropFn.vue'
 
-import HelloWorld from './HelloWorld.vue'
+// import HelloWorld from './HelloWorld.vue'
 import LifeCycle from './LifeCycle.vue'
 import PropFn from './PropFn.vue'
 
 const components:{
   [key:string]:Component
 } = {
-  HelloWorld,
+  // HelloWorld,
   LifeCycle,
   PropFn
 }
