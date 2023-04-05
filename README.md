@@ -29,3 +29,6 @@ https://juejin.cn/post/7087134135193436197
 
  
 
+
+
+https://github.com/futurGH/ts-to-jsdoc/blob/main/index.ts
