@@ -113,6 +113,7 @@ var b=a=3; // 3
 }
 )();
 (function () {
-
+const str='dsfsdfsdf'
+return str.match(/.{1,2}/g) // 将字符串以2个字符做切割,生产的数组
 }
 )();

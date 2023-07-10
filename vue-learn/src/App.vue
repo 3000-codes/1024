@@ -2,7 +2,8 @@
 // import ReduxTest from './test-demo/ReduxTest.vue'
 // import tsx from './test-demo/tsx.vue'
 import LifeCycle from './components/LifeCycle.vue'
-import { ref } from 'vue'
+import StateProp from './test-demo/StateProp.vue'
+import { ref, watch } from 'vue'
 
 const lc = ref()
 
@@ -11,6 +12,12 @@ const test = () => {
 
   lc.value?.changeMsg()
 }
+
+const count = ref({ val: 10 })
+watch(count, (newVal, oldVal) => {
+  console.log(newVal, oldVal)
+})
+
 </script>
 
 <template>
@@ -19,7 +26,8 @@ const test = () => {
   </div>
   <!-- <ReduxTest />
   <tsx /> -->
-  <LifeCycle ref="lc"/>
+  <LifeCycle ref="lc" />
+  <StateProp :count="count" />
 </template>
 
 <style scoped>
