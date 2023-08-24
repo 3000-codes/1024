@@ -116,4 +116,14 @@ var b=a=3; // 3
 const str='dsfsdfsdf'
 return str.match(/.{1,2}/g) // 将字符串以2个字符做切割,生产的数组
 }
+
 )();
+
+(function () {
+  // 监听浏览器开发者工具打开
+  console.log(Object.defineProperties(new Error, {
+      message: { get() { alert('Chrome/Firefox') } },
+      toString: { value() { (new Error).stack!.includes('toString@') && alert('Safari') } }
+  }));
+
+})();
