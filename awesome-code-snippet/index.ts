@@ -145,7 +145,21 @@
     const id = props.params.id ?? raise("No id provided");
   };
 })();
-(() => {})();
+(() => {
+
+  const register=(el:any,event:string,listener:any,options?:any)=>{
+    el.addEventListener(event,listener,options);
+    return ()=>{
+      el.removeEventListener(event,listener,options);
+    }
+  }
+
+  const el=document.getElementById('id');
+  const remove=register(el,'click',()=>{}); // 注册事件:启动监听
+  remove(); // 移除事件:停止监听
+
+
+})();
 (() => {})();
 (() => {})();
 (() => {})();
